@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Peter",
+      "email": "peterparker@starkenterprises.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Tony",
+      "email": "tonystark@starkenterprises.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Jarvis",
+      "email": "jarvis@starkenterprises.com",
+      "password": "password12345"
+    }
+  ]
