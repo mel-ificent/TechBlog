@@ -2,6 +2,23 @@
   <h2>{{title}}</h2>
   <p>{{content}}</p>
   <p>Created by {{user.name}} on {{date_created}}</p>
+
+{{#if this.comment.length}}
+  <div class="col-md-6">
+    <h3>Comments:</h3>
+
+    {{#each comment as |comment|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <p>{{comment.content}}</p>
+        <p>{{comment.user_id}}</p>
+        <p>{{comment.created_date}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+
   <p>
     <form>
       <div class="form-group">
@@ -15,4 +32,4 @@
   </div>
   </p>
 </div>
-<script src="./js/comment.js"></script>
+{{!-- <script src="./js/comment.js"></script> --}}
