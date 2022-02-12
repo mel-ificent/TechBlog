@@ -3,16 +3,16 @@
   <p>{{content}}</p>
   <p>Created by {{user.name}} on {{date_created}}</p>
 
-{{#if this.comment.length}}
+{{#if comments.length}}
   <div class="col-md-6">
     <h3>Comments:</h3>
 
-    {{#each comment as |comment|}}
+    {{#each comments as |comments|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <p>{{comment.content}}</p>
-        <p>{{comment.user_id}}</p>
-        <p>{{comment.created_date}}</p>
+        <p>{{comments.content}}</p>
+        <p>{{comments.user_id}}</p>
+        <p>{{comments.created_date}}</p>
       </div>
     </div>
     {{/each}}
