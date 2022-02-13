@@ -52,7 +52,7 @@ A user can also create a new post from their dashboard page.
 ![New blog post](public/images/newpost.jpg)
 
 Alternatively, a user can view posts and add their own comments.
-
+![New blog post](public/images/post.jpg)
 ![New blog post](public/images/addcomment.jpg)
 ![New blog post](public/images/postandcomment.jpg)
 
