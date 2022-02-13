@@ -1,7 +1,9 @@
 <div class="text-center">
+  <p id="post_id">{{id}}</p>
   <h2>{{title}}</h2>
   <p>{{content}}</p>
   <p>Created by {{user.name}} on {{date_created}}</p>
+
 
 {{#if comments.length}}
   <div class="col-md-6">
@@ -11,7 +13,7 @@
     <div class="row mb-2">
       <div class="col-md-8">
         <p>{{comments.content}}</p>
-        <p>{{comments.user_id}}</p>
+        <p>{{comments.user.name}}</p>
         <p>{{comments.created_date}}</p>
       </div>
     </div>
@@ -20,7 +22,7 @@
   {{/if}}
 
   <p>
-    <form>
+    <form id="new-comment">
       <div class="form-group">
         <label for="comment-content">Leave a comment:</label>
         <textarea class="form-input" id="comment-content" name="comment-content"></textarea>
@@ -32,4 +34,4 @@
   </div>
   </p>
 </div>
-{{!-- <script src="./js/comment.js"></script> --}}
+<script src="/js/comment.js"></script>
