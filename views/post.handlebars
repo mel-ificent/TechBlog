@@ -17,13 +17,6 @@
 <br /><br />
 
 <div id="new-comment" class="input-group mb-3">
-  <input
-    type="text"
-    class="form-control"
-    aria-label="comment-content"
-    id="comment-content"
-    aria-describedby="button-addon2"
-  />
   <button class="btn btn-primary" type="button" id="button-addon2">Add Comment</button>
 </div>
 
@@ -36,9 +29,9 @@
     {{#each comments as |comments|}}
       <div class="card m-3">
         <div class="card-header">
-          {{comments.user_id}}
+          {{comments.commentor}}
           on
-          {{comments.created_date}}
+          {{format_date comments.date_created}}
         </div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">

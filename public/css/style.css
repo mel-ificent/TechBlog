@@ -1,5 +1,5 @@
-a {
-    text-decoration: none; /* no underline */
+.custom-link {
+    text-decoration: none;
   }
 
 .hidden{

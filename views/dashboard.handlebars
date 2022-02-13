@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="col-auto">
-    <button type="submit" class="btn btn-primary"><a class ="text-light" href="/createPost">Create New Blog Post</a></button>
+    <button type="submit" class="btn btn-primary"><a class ="nav-link active text-light" href="/createPost">Create New Blog Post</a></button>
   </div>
 </div>
 
@@ -17,18 +17,19 @@
     <div class="row">
       {{#each posts as |posts|}}
         <div class="col">
-          <div class="card m-3" style="width: 18rem;">
+          <div id="blog-post" class="card m-3" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">{{posts.title}}</h5>
               <h6 class="card-subtitle mb-2 text-muted">Posted on
                 {{format_date posts.date_created}}</h6>
-              <a href="/post/{{posts.id}}" class="card-link">View Post</a>
-              <a href="/post/{{posts.id}}" class="card-link">Delete Post</a>
+              <button class="btn btn-primary"><a href="/post/{{posts.id}}" class="nav-link active text-light">View Post</a></button>
+              <button class="btn btn-danger" data-id="{{posts.id}}">Delete Post</button>
             </div>
           </div>
         </div>
       {{/each}}
     </div>
   </div>
+
+  <script src="/js/dashboard.js"></script>
 {{/if}}
-<script src="/js/dashboard.js"></script>

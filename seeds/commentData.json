@@ -1,8 +1,12 @@
 [
     {
-      "content": "Great blog post!"
+      "content": "Great blog post!",
+      "user_id": 1,
+      "commentor": "Peter"
     },
     {
-        "content": "You make some nice points."
+        "content": "You make some nice points.",
+        "user_id": 3,
+        "commentor": "Jarvis"
       }
   ]
