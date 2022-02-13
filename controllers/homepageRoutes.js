@@ -40,10 +40,11 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
         {
             model: Comment,
-            attributes: ['content', 'date_created', 'user_id'],
+            attributes: ['id', 'content', 'commentor', 'date_created', 'user_id'],
           },
           {
             model: User,
+            attributes: ['id'],
           },
       ],
     });

@@ -1,7 +1,13 @@
 .custom-link {
     text-decoration: none;
+    color:white;
   }
 
 .hidden{
     display: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color:white;
 }
