@@ -1,27 +1,34 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md-6">
-        <button type="submit" class="btn btn-primary"><a href="/createPost">Create New Blog Post</a></button>
-      </div>
-  </div>
-
-  {{#if posts.length}}
-  <div class="col-md-6">
-    <h3>Created Posts:</h3>
-
-    {{#each posts as |posts|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/post/{{posts.id}}">{{posts.title}}</a></h4>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-auto">
+      <h2>{{name}}'s Dashboard</h2>
     </div>
-  {{/each}}
   </div>
-  {{/if}}
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary"><a class ="text-light" href="/createPost">Create New Blog Post</a></button>
+  </div>
 </div>
 
+<br /><br />
+
+{{#if posts.length}}
+  <div class="container">
+    <h3>Created Posts:</h3>
+    <div class="row">
+      {{#each posts as |posts|}}
+        <div class="col">
+          <div class="card m-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{posts.title}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Posted on
+                {{format_date posts.date_created}}</h6>
+              <a href="/post/{{posts.id}}" class="card-link">View Post</a>
+              <a href="/post/{{posts.id}}" class="card-link">Delete Post</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+{{/if}}
+<script src="/js/dashboard.js"></script>

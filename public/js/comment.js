@@ -1,8 +1,8 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
-  console.log("entered the formhandler");
+
     const content = document.querySelector('#comment-content').value.trim();
-    const post_id = document.querySelector('#post_id').textContent;
+    const post_id = document.querySelector('#post_id').innerHTML;
 
     if (content) {
       const response = await fetch(`/api/comment`, {
@@ -23,4 +23,4 @@ const newFormHandler = async (event) => {
   
   document
     .querySelector('#new-comment')
-    .addEventListener('submit', newFormHandler);
+    .addEventListener('click', newFormHandler);
